@@ -1,4 +1,4 @@
-package com.shizhefei.indicator.demo;
+package com.alphawizard.StockMarket;
 
 import org.junit.Test;
 

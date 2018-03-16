@@ -1,4 +1,4 @@
-package com.shizhefei.indicator.demo;
+package com.alphawizard.StockMarket;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
