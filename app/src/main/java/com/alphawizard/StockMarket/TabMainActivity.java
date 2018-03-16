@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.alphawizard.StockMarket.fragment.FirstLayerFragment;
 import com.alphawizard.StockMarket.fragment.HomeFragment;
+import com.alphawizard.StockMarket.fragment.MineFragment;
+import com.alphawizard.StockMarket.fragment.OptionalFragment;
 import com.alphawizard.StockMarket.fragment.TradeFragment;
 import com.shizhefei.view.indicator.FixedIndicatorView;
 import com.shizhefei.view.indicator.IndicatorViewPager;
@@ -29,6 +31,8 @@ public class TabMainActivity extends FragmentActivity {
 
     private HomeFragment homeFragment;
     private TradeFragment tradeFragment;
+    private OptionalFragment optionalFragment;
+    private MineFragment mineFragment;
 
     @Override
     protected void onCreate(Bundle arg0) {
@@ -82,13 +86,13 @@ public class TabMainActivity extends FragmentActivity {
             }else if(position == 1){
                 tradeFragment = new TradeFragment();
                 return tradeFragment;
+            }else if(position == 2){
+                optionalFragment = new OptionalFragment();
+                return optionalFragment;
+            }else {
+                mineFragment = new MineFragment();
+                return mineFragment;
             }
-            FirstLayerFragment mainFragment = new FirstLayerFragment();
-            Bundle bundle = new Bundle();
-            bundle.putString(FirstLayerFragment.INTENT_STRING_TABNAME, tabNames[position]);
-            bundle.putInt(FirstLayerFragment.INTENT_INT_INDEX, position);
-            mainFragment.setArguments(bundle);
-            return mainFragment;
         }
     }
 }
