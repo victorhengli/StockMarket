@@ -1,4 +1,4 @@
-package com.alphawizard.StockMarket;
+package com.alphawizard.StockMarket.utils;
 
 import android.content.Context;
 import android.util.TypedValue;
